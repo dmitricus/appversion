@@ -1,28 +1,42 @@
 [[package]]
+name = "asgiref"
+version = "3.4.1"
+description = "ASGI specs, helper code, and adapters"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.extras]
+tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
+
+[[package]]
 name = "django"
-version = "1.11.29"
+version = "3.2.10"
 description = "A high-level Python Web framework that encourages rapid development and clean, pragmatic design."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [package.dependencies]
+asgiref = ">=3.3.2,<4"
 pytz = "*"
+sqlparse = ">=0.2.2"
 
 [package.extras]
-argon2 = ["argon2-cffi (>=16.1.0)"]
+argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
 name = "djangorestframework"
-version = "3.11.2"
+version = "3.13.1"
 description = "Web APIs for Django, made easy."
 category = "main"
 optional = false
-python-versions = ">=3.5"
+python-versions = ">=3.6"
 
 [package.dependencies]
-django = ">=1.11"
+django = ">=2.2"
+pytz = "*"
 
 [[package]]
 name = "pytz"
@@ -32,21 +46,37 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[[package]]
+name = "sqlparse"
+version = "0.4.2"
+description = "A non-validating SQL parser."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "eb0538789797db4d5fd7bc337b61f7dbcc8a0740a19dee5236cf913e34e5163f"
+content-hash = "50c9ed208dde2d211379816d0c31192c019ad7e4e1a1b2b06bcf5b118ce054b5"
 
 [metadata.files]
+asgiref = [
+    {file = "asgiref-3.4.1-py3-none-any.whl", hash = "sha256:ffc141aa908e6f175673e7b1b3b7af4fdb0ecb738fc5c8b88f69f055c2415214"},
+    {file = "asgiref-3.4.1.tar.gz", hash = "sha256:4ef1ab46b484e3c706329cedeff284a5d40824200638503f5768edb6de7d58e9"},
+]
 django = [
-    {file = "Django-1.11.29-py2.py3-none-any.whl", hash = "sha256:014e3392058d94f40569206a24523ce254d55ad2f9f46c6550b0fe2e4f94cf3f"},
-    {file = "Django-1.11.29.tar.gz", hash = "sha256:4200aefb6678019a0acf0005cd14cfce3a5e6b9b90d06145fcdd2e474ad4329c"},
+    {file = "Django-3.2.10-py3-none-any.whl", hash = "sha256:df6f5eb3c797b27c096d61494507b7634526d4ce8d7c8ca1e57a4fb19c0738a3"},
+    {file = "Django-3.2.10.tar.gz", hash = "sha256:074e8818b4b40acdc2369e67dcd6555d558329785408dcd25340ee98f1f1d5c4"},
 ]
 djangorestframework = [
-    {file = "djangorestframework-3.11.2-py3-none-any.whl", hash = "sha256:5cc724dc4b076463497837269107e1995b1fbc917468d1b92d188fd1af9ea789"},
-    {file = "djangorestframework-3.11.2.tar.gz", hash = "sha256:a5967b68a04e0d97d10f4df228e30f5a2d82ba63b9d03e1759f84993b7bf1b53"},
+    {file = "djangorestframework-3.13.1-py3-none-any.whl", hash = "sha256:24c4bf58ed7e85d1fe4ba250ab2da926d263cd57d64b03e8dcef0ac683f8b1aa"},
+    {file = "djangorestframework-3.13.1.tar.gz", hash = "sha256:0c33407ce23acc68eca2a6e46424b008c9c02eceb8cf18581921d0092bc1f2ee"},
 ]
 pytz = [
     {file = "pytz-2021.3-py2.py3-none-any.whl", hash = "sha256:3672058bc3453457b622aab7a1c3bfd5ab0bdae451512f6cf25f64ed37f5b87c"},
     {file = "pytz-2021.3.tar.gz", hash = "sha256:acad2d8b20a1af07d4e4c9d2e9285c5ed9104354062f275f3fcd88dcef4f1326"},
+]
+sqlparse = [
+    {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
+    {file = "sqlparse-0.4.2.tar.gz", hash = "sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae"},
 ]
